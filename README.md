@@ -1,2 +1,2 @@
 # Help-Portal
-Snippet of Help-Portal design
+Snippet of Help-Portal design using Angular framework
