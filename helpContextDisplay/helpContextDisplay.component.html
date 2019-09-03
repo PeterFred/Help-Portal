@@ -1,0 +1,53 @@
+<div class="body-container">
+    <div class="header-label-container">
+        <div class="header-label">{{helpContextObject?.pageTitle}}</div>
+
+        <div class="cancel-help-icon-container">
+            <img src="/image/SharedImages/Cancel Icon Purple.svg" alt="Cancel" class="cancel-icon" (click)="closeHelp()">
+
+        </div>
+    </div>
+        <div class ="main-content">
+            <div class="left-hand-content">
+                <div class="image-container" [ngStyle]="{'background-image': 'url(' + displayImageURL + ')'}"></div>
+
+            </div>
+
+            <div class="right-hand-content ">
+                <div class="related-content">RELATED CONTENT</div>
+
+                <div class="related-content-index">
+                    <app-relatedArticles [findRelatedHelp]="helpObject"></app-relatedArticles>
+                </div>
+
+            </div>
+    </div>
+
+        <div class="footer">
+            <div class="spacer">   </div>
+
+            <div class="pagination" *ngIf ="navigateArrow">
+                <div class="left-arrow-container">
+                    <img src="/image/HelpContext/L_arrow.png" alt="Left" (click)="navLeft()" class="leftArrow" *ngIf ="leftArrow">
+                </div>
+                <div class="right-arrow-container">
+                    <img src="/image/HelpContext/R_arrow.png" alt="Right" (click)="navRight()" class="rightArrow" *ngIf ="rightArrow">
+                </div>
+                
+            </div>
+
+            <div class="spacer" *ngIf="showSpacer">
+            </div>
+
+            <div class="rh-container" (click)="openHelpObject()" *ngIf="helpContextObject.helpObjectID">
+                <div class="purple-chevron">
+                </div>
+
+
+                <div class="text-container">
+                    FULL ARTICLE
+                </div>
+            </div>
+
+        </div>
+</div>

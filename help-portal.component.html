@@ -1,0 +1,116 @@
+
+<div class="header">
+    <app-logo-link></app-logo-link>
+</div>
+<div class="content-container">
+
+    <div class="left-hand-content">
+
+        <div class="top-content">
+            <div class="top-container">
+                <div class="help-text">
+                    <b>How can we help you today?</b>
+                </div>
+
+                <div class="rh-container">
+                    <div class="purple-chevron">
+                    </div>
+                    <div class="contact-container">
+
+                        <div class="browse-all">
+                            <b>BROWSE ALL</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <app-helpSearch></app-helpSearch>
+        </div>
+       
+
+        <div class="bottom-content">
+            <div class="links">
+                <h1>Popular Articles</h1>
+                <ul class="list">
+                    
+                    <li *ngFor="let helpObject of sortByClicks() | slice:0:7; let i=index" (click)="openHelpItem(helpObject)">
+                        {{helpObject.pageTitle}}
+
+                    </li>
+
+                </ul>
+            </div>
+            
+            <div class="links">
+                <h1>Latest Articles</h1>
+                <ul class="list">
+                    
+                    <li *ngFor="let help of sortByDate() | slice:0:7; let i=index" (click)="openHelpItem(help)">
+                        {{help.pageTitle}}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <div style="height: 52px; clear:both;"></div>
+                    <a href="http://www.google.com"><font color="593b5e">From the CEO</font></a> <br>
+                    <a href="http://www.google.com"><font color="593b5e">Latest News</font></a> <br>
+                    <a href="http://www.google.com"><font color="593b5e">Latest Features</font></a> <br>
+                    <a href="http://www.google.com"><font color="593b5e">Release Notes</font></a> <br>
+                    <a href="http://www.google.com"><font color="593b5e">Terms and Conditions</font></a> <br>
+                    <a href="http://www.google.com"><font color="593b5e">Privacy and Cookies</font></a> <br>
+                    <a href="http://www.google.com"><font color="593b5e">Suggest an Article</font></a> <br>
+            </div>
+
+                
+        </div>
+    </div>
+
+           <div *ngIf="show" class="rightHandContent">
+                <div class="svg-icons">
+                    <img src="../../../../wwwroot/Image/SharedImages/Help_RH_placeholder_top.svg" />
+                </div>
+
+                <div class="svg-icons">
+                    <img src="../../../../wwwroot/Image/SharedImages/Help_RH_placeholder_middle.svg" />
+               </div>
+                <div class="svg-icons">
+                    <img src="../../../../wwwroot/Image/SharedImages/Help_RH_placeholder_bottom.svg" />
+                </div>
+            </div>
+
+
+    </div>
+<div class="footer">
+    <div class="issue-outer">
+        <div class="issue-container">
+            <div class="issue-container-icon ">
+                <img src="/image/IconSets/NavBarIcons/Report Issue.svg" alt="report an issue" class="issue-icon">
+            </div>
+        
+        </div>
+    <div class="issue-chevron"></div>
+    </div>
+  
+    <div class="email-link">
+        <a href="mialto:customer_service@spectral-solutions.com" target="_top">REPORT AN ISSUE</a>
+    </div>
+
+  
+    <div class="footer-words">
+        <b>Can't find what your looking for?   Want to suggest an article or give feedback?</b>
+    </div>
+
+    <div class="rh-container">
+        <div class="purple-chevron">
+        </div>
+        <div class="contact-container">
+
+            <div>
+                <a href="mialto:customer_service@spectral-solutions.com?Subject=Spectral%20Help" target="_top">CONTACT US</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<helpItemDisplay *ngIf="showHelpItem" [helpDisplayObject]="helpDisplayItem"></helpItemDisplay>

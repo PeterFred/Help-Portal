@@ -1,0 +1,254 @@
+:host {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    flex-basis: 70px;
+    background-color: #e6e6e6;
+}
+
+.content-container{
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.left-hand-content {
+    display: flex;
+    flex: 4;
+    height: 100%;
+    flex-direction: column;
+}
+
+.top-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: inset 0px 3px 4px 0px #ababab;
+    justify-content: center;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px 80px 10px 80px;
+}
+
+.help-text {
+    display: flex;
+    color: #421c52;
+    align-self: center;
+    font-size: 30px;
+    font-family: 'Century Gothic';
+}
+
+.bottom-content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background-color: #f2f2f2;
+    box-shadow: inset 0px 4px 5px 0px #ababab;
+    list-style-type: none;
+    flex-wrap: nowrap; 
+}
+
+h1 {
+    font-size: 20px;
+    font-family: 'Century Gothic';
+    color: #421c52;
+    font-weight: bold;
+    margin: 20px auto 10px 40px;
+}
+
+.links {
+    margin: 30px 80px 20px 40px;
+    flex: 1;
+    color: gray;
+    font-family: 'Century Gothic';
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    line-height: 200%;
+}
+
+.links:last-child {
+    text-align: right;
+}
+
+.links:last-child:hover {
+    cursor: pointer;
+    color: red; /*MAKE THIS UNIFORM TO OTHER LINKS*/
+}
+
+ul.list {
+    list-style-type: none;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+li:hover {
+    cursor: pointer;
+    color: darkgray;
+}
+
+.rightHandContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    height: 100%;
+    background-image: url('../../../../wwwroot/Image/SharedImages/Right Hand Background.png');
+    align-items: center;
+   
+}
+
+.svg-icons{
+   width: 80%;
+   height: 80%;
+}
+
+
+
+.browse-all {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Century Gothic';
+}
+
+.footer {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    flex-basis: 75pt;
+    background-color: #CCCCCC;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 4px 0px #ababab;
+    font-size: 16px;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    max-height: 75px;
+    color: #421c52;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 1.5px;
+}
+
+.issue-outer {
+    display: flex;
+}
+.issue-container {
+    display: flex;
+    height: 100%;
+    min-height:50px;
+    max-height: 50px;
+    max-width: 50px;
+    flex-basis: 50px;
+    min-width: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1px;
+    background-color: #F7931E;
+    cursor: pointer;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.issue-container-icon {
+    flex: 1;
+    display: flex;
+}
+
+.issue-icon {
+    display: flex;
+    width: 72%;
+    margin: auto;
+}
+
+.issue-chevron {
+    display: flex;
+    margin-left: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 20px solid #F7931E;
+    position: relative;
+}
+
+.email-link {
+    color: #682F8E;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.email-link a:link {
+    color: #421c52;
+    font-weight: bold;
+}
+
+.e-mail-link:hover a{ /*SORT THIS OUT*/
+    text-decoration: none;
+    font-size: x-small;
+    font-family: Verdana;
+    text-decoration: none;
+    color: #FFF;
+    background-color: black;
+}
+
+.contact-container {
+    display: flex;
+    flex: 1;
+    min-height: 50px;
+    max-width: 160px;
+    flex-basis: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #682F8E;
+    cursor: pointer;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3)
+}
+
+
+.contact-container a:link {
+    color: #f7931e;
+   font-family: 'Century Gothic';
+   font-weight: bold;
+}
+
+.rh-container {
+    display: flex;
+    height: 80%;
+    width: 160px;
+    margin: 10px 0 10px 10px;
+   position: relative;
+}
+
+.purple-chevron {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 20px solid #682F8E;
+    position: relative;
+}
+
+
+

@@ -1,0 +1,5 @@
+<ul class="related-articles-list">
+    <li class="related-articles" *ngFor="let title of relatedArticles | slice:0:7; let i=index" (click)="openHelpObject(title)">
+        {{title.pageTitle}}
+    </li>
+</ul>

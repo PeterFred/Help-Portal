@@ -1,0 +1,85 @@
+<div class="header">
+    <app-logo-link></app-logo-link>
+    <div class="cancel-help-icon-container">
+        <img src="/image/SharedImages/Cancel Icon Purple.svg" alt="Cancel" class="cancel-icon" (click)="closeHelp()">
+
+    </div>
+    
+</div>
+
+
+<div class="flex-container">
+    <app-helpImage *ngIf="showHelpImage" [displayObject]="helpContentObject"></app-helpImage>
+    <!--<div class="expanded-image" *ngIf="expandedImage" (click)="closeExpandedImage()">
+        <img src="{{expandedImage.url}}" />
+    </div>-->
+
+    <div class="left-hand-content">
+
+
+        <div class="top-content">
+            <div class="index-header">
+                CONTENTS
+            </div>
+            <div class="sidebar-title">
+                {{helpObject.pageTitle}}
+            </div>
+
+            <div class="contents" id="helpContent">
+                <div *ngFor="let disp of content; let i = index">
+                    <div class="content-display">
+                        {{disp.header}}
+                        <!--<a href="#content{{i}}">{{disp.header}}</a>-->
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="bottom-content">
+            <div class="related-article-header">
+                Related Articles
+            </div>
+            
+            <div class="related-articles">
+                <app-relatedArticles [findRelatedHelp]="helpObject"></app-relatedArticles>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="right-hand-content">
+        <div class="body-header">
+            {{helpObject.pageTitle}}
+        </div>
+
+
+
+        <div class="main-body-container">
+            <div class="main-content" id="helpContent">
+
+                <div *ngFor="let disp of content">
+                    <div [ngClass]="disp.type === 'main' ? 'defColor': 'body-content'">
+                        <h3>{{disp.header}}</h3>
+                        <p [innerHTML]="disp.body | NewLine"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                Click to Expand Images
+
+                <ul id="images-list">
+                    <li *ngFor=" let image of content">
+                        <img *ngIf="image.imageUrl" src="{{image.imageUrl}}" class="image-container" (click)="expandImage(image)">
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

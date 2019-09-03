@@ -1,0 +1,11 @@
+<div class="dropdown" *ngIf="helpObjects && helpObjects.length" #dropDown>
+        <ul class="dropdown-list inner-ul">
+            <li class="inner-li" *ngFor="let help of helpObjects; let i = index" (click)="openHelpObject(help)">
+                <div class="help-objects">
+                    <div>
+                        {{help.pageTitle}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+</div>
